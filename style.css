@@ -30,4 +30,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(40px);
+}
+
+.container::before{
+  content: '';
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  background: #f41b75;
+  z-index: -1;
+}
+
+.container::after{
+  content: '';
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  bottom: -30px;
+  right: -50px;
+  background: #419aff;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.clock span{
+  font-size: 80px;
+  width: 110px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.clock span::after{
+  font-size: 16px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#hrs:after{
+  content: 'HOUR';
+}
+
+#min:after{
+  content: 'MINS';
+}
+
+#sec:after{
+  content: 'SEC';
 }
