@@ -1,6 +1,6 @@
-let hrs = document.querySelector('#hrs');
-let min = document.querySelector('#min');
-let sec = document.querySelector('#sec');
+const hrs = document.querySelector('#hrs');
+const min = document.querySelector('#min');
+const sec = document.querySelector('#sec');
 
 setInterval(() => {
   let currentTime = new Date();
